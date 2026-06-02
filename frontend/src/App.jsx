@@ -33,32 +33,38 @@ export default function App() {
   }
 
   async function generate() {
-    setLoading(true)
-    setError('')
-    try {
-      const res = await fetch(
-        'https://password-generator-9hto.onrender.com/generate',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            length,
-            ...options,
-          }),
-        }
-      )
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error || 'Failed to generate')
-      setPassword(data.password)
-      setStrength(data.strength)
-    } catch (err) {
-      setError(err.message)
-    } finally {
-      setLoading(false)
+  setLoading(true)
+  setError('')
+
+  try {
+    const res = await fetch(
+      'https://password-generator-9hto.onrender.com/api/generate',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          length,
+          ...options,
+        }),
+      }
+    )
+
+    const data = await res.json()
+
+    if (!res.ok) {
+      throw new Error(data.error || 'Failed to generate')
     }
+
+    setPassword(data.password)
+    setStrength(data.strength)
+  } catch (err) {
+    setError(err.message)
+  } finally {
+    setLoading(false)
   }
+}
 
   async function copyPassword() {
     if (!password) return
