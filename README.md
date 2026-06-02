@@ -1,4 +1,4 @@
-# Password Generator — React + Flask
+# Password Generator [React + Flask]
 
 A full-stack password generator with a React (Vite) frontend and Python Flask backend.
 
