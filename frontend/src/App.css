@@ -1,0 +1,192 @@
+.card {
+  background: #1a1a24;
+  border: 1px solid #2e2e42;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 460px;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.lock-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+
+.card-header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f0f0ff;
+  margin-bottom: 4px;
+}
+
+.card-header p { font-size: 0.85rem; color: #888; }
+
+/* Password display */
+.pw-display {
+  background: #111118;
+  border: 1px solid #2e2e42;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+  min-height: 56px;
+}
+
+.pw-text {
+  flex: 1;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: #c8f7c5;
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+.pw-text.placeholder { color: #444; font-style: italic; }
+
+.pw-actions { display: flex; gap: 6px; flex-shrink: 0; }
+
+.icon-btn {
+  background: #1e1e2e;
+  border: 1px solid #2e2e42;
+  border-radius: 8px;
+  color: #888;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 34px;
+  height: 34px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.icon-btn:hover:not(:disabled) { background: #2a2a3a; color: #e8e8f0; }
+.icon-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.icon-btn.success { color: #1d9e75; border-color: #1d9e75; background: #0d2e22; }
+
+/* Controls */
+.controls {
+  background: #111118;
+  border: 1px solid #2e2e42;
+  border-radius: 10px;
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.ctrl-label { font-size: 0.8rem; color: #888; white-space: nowrap; }
+.ctrl-val { font-size: 0.85rem; font-weight: 600; color: #e8e8f0; min-width: 26px; text-align: right; }
+
+input[type="range"] {
+  flex: 1;
+  accent-color: #4a7cf7;
+  cursor: pointer;
+}
+
+/* Toggles */
+.toggle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.toggle-btn {
+  background: #1a1a24;
+  border: 1px solid #2e2e42;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.12s, border-color 0.12s;
+  text-align: left;
+}
+
+.toggle-btn:hover { background: #22222e; }
+
+.toggle-btn.active {
+  background: #0d1f3e;
+  border-color: #2a5bbd;
+}
+
+.toggle-label { font-size: 0.8rem; color: #aaa; flex: 1; }
+.toggle-btn.active .toggle-label { color: #a8c4ff; }
+
+.toggle-example { font-size: 0.72rem; color: #555; font-family: monospace; }
+.toggle-btn.active .toggle-example { color: #4a7cf7; }
+
+.toggle-check {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  border: 1px solid #444;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px;
+  color: transparent;
+  flex-shrink: 0;
+}
+
+.toggle-btn.active .toggle-check {
+  background: #4a7cf7;
+  border-color: #4a7cf7;
+  color: white;
+}
+
+/* Strength */
+.strength-wrap { margin-top: 1rem; }
+
+.strength-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.bar-track {
+  height: 4px;
+  background: #2e2e42;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.35s ease, background 0.35s;
+}
+
+/* Generate button */
+.generate-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4a7cf7;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.generate-btn:hover:not(:disabled) { background: #3a6ae7; }
+.generate-btn:active:not(:disabled) { transform: scale(0.98); }
+.generate-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Error */
+.error { font-size: 0.8rem; color: #e24b4a; margin-bottom: 0.75rem; text-align: center; }
+
+/* Responsive */
+@media (max-width: 480px) {
+  .card { padding: 1.25rem; }
+  .toggle-grid { grid-template-columns: 1fr 1fr; }
+}
