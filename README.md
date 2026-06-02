@@ -42,7 +42,7 @@ npm run dev
 # Runs on http://localhost:5173
 ```
 
-Open *http://localhost:5173* in your browser.
+Open **http://localhost:5173** in your browser.
 
 ## Features
 - Cryptographically secure password generation (`secrets` module)
