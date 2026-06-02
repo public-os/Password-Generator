@@ -2,7 +2,7 @@
 
 A full-stack password generator with a React (Vite) frontend and Python Flask backend.
 
-Link - https://password-generator-frontend-myvj.onrender.com/
+https://password-generator-frontend-myvj.onrender.com/
 
 ## Setup & Run
 
