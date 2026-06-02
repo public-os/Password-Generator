@@ -36,11 +36,19 @@ export default function App() {
     setLoading(true)
     setError('')
     try {
-      const res = await fetch('/api/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ length, ...options }),
-      })
+      const res = await fetch(
+        'https://password-generator-9hto.onrender.com/generate',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            length,
+            ...options,
+          }),
+        }
+      )
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Failed to generate')
       setPassword(data.password)
