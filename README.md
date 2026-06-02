@@ -42,31 +42,7 @@ npm run dev
 # Runs on http://localhost:5173
 ```
 
-Open **http://localhost:5173** in your browser.
-
-## API
-
-`POST /api/generate`
-
-**Request body:**
-```json
-{
-  "length": 16,
-  "uppercase": true,
-  "lowercase": true,
-  "numbers": true,
-  "symbols": false
-}
-```
-
-**Response:**
-```json
-{
-  "password": "aB3xKm9Qr2Lp5nWv",
-  "strength": "Strong",
-  "length": 16
-}
-```
+Open *http://localhost:5173* in your browser.
 
 ## Features
 - Cryptographically secure password generation (`secrets` module)
