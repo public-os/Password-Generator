@@ -2,24 +2,6 @@
 
 A full-stack password generator with a React (Vite) frontend and Python Flask backend.
 
-## Project Structure
-
-```
-password-generator/
-├── backend/
-│   ├── app.py              # Flask API
-│   └── requirements.txt
-└── frontend/
-    ├── index.html
-    ├── vite.config.js
-    ├── package.json
-    └── src/
-        ├── main.jsx
-        ├── App.jsx
-        ├── App.css
-        └── index.css
-```
-
 ## Setup & Run
 
 ### 1. Backend (Flask)
